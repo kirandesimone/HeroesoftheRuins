@@ -12,8 +12,9 @@ def main():
     window_width = config.get("window").get("width")
     window_height = config.get("window").get("height")
     fps = config.get("game").get("fps")
+    tilesize = config.get("game").get("tilesize")
 
-    World(window_width, window_height).start(fps) 
+    World(window_width, window_height, tilesize).start(fps) 
 
 
 if __name__ == "__main__":

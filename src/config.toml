@@ -4,3 +4,4 @@ height = 480
 
 [game]
 fps = 60.0
+tilesize = 32

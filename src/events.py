@@ -8,8 +8,7 @@ class Message():
 @dataclass
 class MoveMessage(Message):
     entity: sprite.Sprite
-    x_position: int
-    y_position: int
+    direction: str
 
 @dataclass
 class AttackMessage(Message):
