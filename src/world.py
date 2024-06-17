@@ -2,9 +2,10 @@ import pygame
 import sys
 import numpy as np
  
-from ..events import *
-from ..entities.player import Player
-from ..map_builder.map_builder import MapBuilder
+from .events import *
+from .entities.player import Player
+from .map_builder.map_builder import MapBuilder
+from .map_builder.world_map import WorldMap
 
 BLACK=(0,0,0)
 
@@ -30,12 +31,16 @@ class World:
 
         rng = np.random.default_rng(seed=10)
 
-        MapBuilder(
+        world_map = WorldMap()
+        print(world_map.dungeon_digraph)
+
+        """MapBuilder(
             self._screen.get_width(), 
             self._screen.get_height(), 
             (15, 20), 
             self.floor_layer, self.wall_layer, self.player_layer
         ).build(rng)
+        """
     
     def _system_events(self):
         for sys_event in pygame.event.get():

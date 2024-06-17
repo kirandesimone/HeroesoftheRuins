@@ -1,6 +1,6 @@
 import tomllib
 
-from .entities.world import World
+from .world import World
 
 def read_config():
     with open("src/config.toml", "rb") as config_file:
@@ -9,10 +9,10 @@ def read_config():
 
 def main():
     config = read_config()
-    window_width = config.get("window").get("width")
-    window_height = config.get("window").get("height")
-    fps = config.get("game").get("fps")
-    tilesize = config.get("game").get("tilesize")
+    window_width = config.get("window").get("width") # type: ignore
+    window_height = config.get("window").get("height") # type: ignore
+    fps = config.get("game").get("fps") # type: ignore
+    tilesize = config.get("game").get("tilesize") # type: ignore
 
     World(window_width, window_height, tilesize).start(fps) 
 

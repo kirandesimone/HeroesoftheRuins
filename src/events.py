@@ -23,3 +23,7 @@ class CollideMessage(Message):
 @dataclass
 class EncounterMessage(Message):
     pass
+
+@dataclass
+class NextDungeon(Message):
+    pass

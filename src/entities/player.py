@@ -1,4 +1,7 @@
 import pygame
+
+from typing import Any
+
 from ..game_layer import GameLayer
 from ..events import *
 
@@ -40,7 +43,7 @@ class Player(pygame.sprite.Sprite):
                 self.facing = "right"
                 
    
-    def update(self, *args: any, **kwargs: any) -> None:
+    def update(self, *args: Any, **kwargs: Any) -> None:
         if len(args) == 0:
             return
         
